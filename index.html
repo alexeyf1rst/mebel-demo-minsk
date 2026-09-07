@@ -164,8 +164,8 @@ h2 span{color:var(--brass)}
 .chint{font-size:14px;color:#8d8474;margin-bottom:24px}
 .copts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .copts.one{grid-template-columns:1fr}
-.opt{display:flex;align-items:center;gap:13px;background:#232019;border:1px solid #3a352d;
-  padding:15px 16px;cursor:pointer;text-align:left;transition:.18s;color:#fff}
+.opt{display:flex;align-items:center;justify-content:flex-start;gap:13px;background:#232019;
+  border:1px solid #3a352d;padding:15px 16px;cursor:pointer;text-align:left;transition:.18s;color:#fff}
 .opt:hover{border-color:var(--brass);background:#2a251d;transform:translateY(-1px)}
 .opt.sel{border-color:var(--brass2);background:#2e2718;box-shadow:inset 0 0 0 1px var(--brass2)}
 .opt .ic{width:38px;height:38px;flex:none;border:1px solid #4a443a;display:grid;place-items:center;
@@ -352,6 +352,20 @@ footer a:hover{color:var(--brass2)}
 .fbot span{max-width:640px}
 @media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:24px}}
 
+
+/* ---------- переключатель стилей ---------- */
+.vsw{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:80;background:#100e0a;
+  border:1px solid #34302a;border-right:none;padding:9px 7px;display:flex;flex-direction:column;
+  align-items:center;gap:7px;box-shadow:-6px 0 26px -12px #000}
+.vsw u{text-decoration:none;font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;color:#6d665a;
+  writing-mode:vertical-rl;transform:rotate(180deg);margin-bottom:2px}
+.vsw a{width:34px;height:34px;display:grid;place-items:center;font-family:var(--sans);font-weight:700;
+  font-size:14px;color:#8d8474;background:#1d1a15;border:1px solid #34302a;transition:.2s}
+.vsw a:hover{color:#fff;border-color:#5d564a}
+.vsw a.on{background:var(--brass);color:#fff;border-color:var(--brass)}
+@media(max-width:700px){.vsw{top:auto;bottom:88px;transform:none;flex-direction:row;padding:6px}
+  .vsw u{display:none}.vsw a{width:30px;height:30px;font-size:13px}}
+
 /* ---------- мобильная панель ---------- */
 .mob{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:10px;padding:10px 14px
   calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.95);backdrop-filter:blur(12px);
@@ -364,6 +378,12 @@ footer a:hover{color:var(--brass2)}
 </style>
 </head>
 <body>
+
+<div class="vsw">
+  <u>СТИЛЬ</u>
+  <a href="index.html" class="on" title="Стиль 1 — «Чертёж», авторский">1</a>
+  <a href="standart.html" title="Стиль 2 — стандартный">2</a>
+</div>
 
 <div id="demo">ДЕМОНСТРАЦИОННЫЙ МАКЕТ · <b>ЧЕРТЁЖ</b> — вымышленная мастерская, цены и отзывы условные</div>
 
