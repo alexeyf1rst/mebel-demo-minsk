@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Мебель на заказ в Минске — шкафы-купе, гардеробные, кухни | ЧЕРТЁЖ</title>
+<meta name="description" content="Мебельная мастерская полного цикла в Минске: замер, проект, изготовление, установка. Расчёт стоимости за минуту, цена фиксируется в договоре.">
+<meta name="theme-color" content="#17150f">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17150f; --ink2:#2a2620; --ink3:#4a443a;
+  --paper:#faf8f4; --paper2:#f2ece1; --paper3:#e8e0d1;
+  --line:#ddd3c0; --line2:#c9bda4;
+  --brass:#b5822f; --brass2:#dda94e; --brass3:#f0d9a8;
+  --blue:#31506b;
+  --ok:#3f7a52;
+  --sans:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --wrap:1180px;
+  --sh:0 18px 50px -18px rgba(23,21,15,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.mono{font-family:var(--mono)}
+
+/* ---------- служебная плашка ---------- */
+#demo{background:var(--ink);color:#b9b0a0;font-family:var(--mono);font-size:11px;
+  letter-spacing:.04em;text-align:center;padding:7px 14px;border-bottom:1px solid #2b2820}
+#demo b{color:var(--brass2);font-weight:500}
+
+/* ---------- шапка ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(23,21,15,.0);transition:.3s}
+header.stuck{background:rgba(250,248,244,.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);box-shadow:0 4px 24px -14px rgba(23,21,15,.4)}
+.hd{display:flex;align-items:center;gap:16px;padding:14px 20px;max-width:var(--wrap);margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo .mk{width:30px;height:30px;flex:none}
+.logo b{font-size:17px;font-weight:800;letter-spacing:.14em;line-height:1;color:#fff;transition:.3s}
+.logo i{display:block;font-style:normal;font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+  color:#8d8474;margin-top:3px;transition:.3s}
+header.stuck .logo b{color:var(--ink)}
+header.stuck .logo i{color:var(--ink3)}
+.hnav{margin-left:auto;display:flex;gap:26px;font-size:14.5px;color:#cdc5b6;transition:.3s}
+header.stuck .hnav{color:var(--ink2)}
+.hnav a{position:relative;padding:3px 0}
+.hnav a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;
+  background:var(--brass2);transition:right .3s}
+.hnav a:hover::after{right:0}
+.htel{font-family:var(--mono);font-size:14px;color:#fff;white-space:nowrap;transition:.3s}
+header.stuck .htel{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--brass);color:#fff;border:1px solid var(--brass);padding:13px 24px;
+  font-size:14.5px;font-weight:600;cursor:pointer;transition:.22s;white-space:nowrap;position:relative;overflow:hidden}
+.btn:hover{background:var(--brass2);border-color:var(--brass2);color:var(--ink);
+  box-shadow:0 10px 30px -10px rgba(181,130,47,.7)}
+.btn:active{transform:translateY(1px)}
+.btn.gh{background:none;color:#fff;border-color:rgba(255,255,255,.35)}
+.btn.gh:hover{background:rgba(255,255,255,.08);border-color:#fff;box-shadow:none;color:#fff}
+.btn.dk{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.dk:hover{background:var(--ink2);border-color:var(--ink2);color:#fff}
+.btn.wide{width:100%;padding:16px 24px;font-size:16px}
+.hbtn{flex:none}
+@media(max-width:1080px){.hnav{display:none}}
+@media(max-width:700px){.hbtn{display:none}.htel{font-size:13.5px;margin-left:auto}}
+@media(max-width:620px){.hd{gap:10px;padding:12px 16px}.btn{padding:11px 16px;font-size:13.5px}.logo b{font-size:15.5px}.htel{font-size:12.5px}}
+@media(max-width:370px){.htel{display:none}}
+
+/* ---------- первый экран ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;
+  margin-top:calc(-1 * var(--hh,74px));padding:calc(var(--hh,74px) + 30px) 0 0}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:56px 56px}
+.hero::after{content:"";position:absolute;width:720px;height:720px;right:-180px;top:-260px;pointer-events:none;
+  background:radial-gradient(circle,rgba(181,130,47,.28),transparent 62%);filter:blur(20px)}
+.hin{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center;
+  padding:34px 0 64px}
+.tag{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.1em;color:var(--brass3);border:1px solid rgba(221,169,78,.35);padding:7px 13px;
+  margin-bottom:26px}
+.tag s{text-decoration:none;width:5px;height:5px;background:var(--brass2);border-radius:50%;
+  box-shadow:0 0 10px var(--brass2);animation:bl 2.6s ease-in-out infinite}
+@keyframes bl{50%{opacity:.35}}
+h1{font-size:clamp(33px,4.6vw,58px);line-height:1.04;font-weight:800;letter-spacing:-.025em;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--brass2);position:relative}
+@media(min-width:430px){h1 em{white-space:nowrap}}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:2px;background:var(--brass);opacity:.5}
+.sub{font-size:17.5px;line-height:1.6;color:#c3bbac;max-width:520px;margin-bottom:32px}
+.hcta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px}
+.hnum{display:grid;grid-template-columns:repeat(4,auto);gap:34px;padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.12)}
+.hnum b{display:block;font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+.hnum b u{text-decoration:none;font-size:14px;color:var(--brass2);margin-left:2px}
+.hnum span{font-size:12.5px;color:#8d8474;line-height:1.35;display:block;margin-top:3px}
+@media(max-width:940px){
+  .hin{grid-template-columns:1fr;gap:34px;padding-bottom:44px}
+  .hnum{grid-template-columns:repeat(2,1fr);gap:20px}}
+@media(max-width:560px){.hcta .btn{width:100%}}
+
+/* чертёж */
+.draw{position:relative}
+.draw svg{width:100%;height:auto;overflow:hidden}
+.draw .dl{stroke:var(--brass2);fill:none;stroke-width:1.4;
+  stroke-dasharray:1400;stroke-dashoffset:1400;animation:dash 2.4s ease-out forwards}
+.draw .d2{animation-delay:.35s}
+.draw .d3{animation-delay:.7s}
+@keyframes dash{to{stroke-dashoffset:0}}
+.draw .fillw{fill:rgba(221,169,78,.07)}
+.draw .dim{stroke:rgba(255,255,255,.4);stroke-width:.7;fill:none}
+.draw text{font-family:var(--mono);font-size:9.5px;fill:rgba(255,255,255,.55)}
+.draw .cap{fill:var(--brass2);font-size:10px;letter-spacing:.08em}
+
+/* бегущая строка */
+.mq{background:var(--brass);color:#fff;overflow:hidden;padding:11px 0;position:relative}
+.mqin{display:flex;gap:44px;white-space:nowrap;animation:mq 34s linear infinite;font-family:var(--mono);
+  font-size:12.5px;letter-spacing:.08em;width:max-content}
+.mqin span{display:flex;align-items:center;gap:44px}
+.mqin i{font-style:normal;opacity:.55}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- общие секции ---------- */
+section{padding:88px 0;position:relative;scroll-margin-top:calc(var(--hh,74px) + 14px)}
+.sec-h{margin-bottom:44px;max-width:720px}
+.eyebrow{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.14em;color:var(--brass);margin-bottom:16px;text-transform:uppercase}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--brass);flex:none}
+h2{font-size:clamp(27px,3.4vw,42px);line-height:1.12;font-weight:800;letter-spacing:-.02em}
+h2 span{color:var(--brass)}
+.lead{font-size:17px;color:var(--ink3);margin-top:15px;line-height:1.6}
+.grid-bg{background:var(--paper2);
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:34px 34px}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.rv.in{opacity:1;transform:none}
+</style>
+<style>
+/* ---------- калькулятор ---------- */
+#calc{background:var(--ink);color:#fff;padding:78px 0}
+#calc .eyebrow{color:var(--brass2)}
+#calc .eyebrow::before{background:var(--brass2)}
+#calc .lead{color:#b6ada0}
+.cbox{display:grid;grid-template-columns:1.35fr .65fr;gap:0;border:1px solid #34302a;background:#1d1a15;
+  box-shadow:0 40px 90px -50px #000}
+.cmain{padding:34px 34px 30px;position:relative;min-height:430px;display:flex;flex-direction:column}
+.cprog{display:flex;gap:6px;margin-bottom:28px}
+.cprog i{flex:1;height:3px;background:#34302a;position:relative;overflow:hidden}
+.cprog i.on::after{content:"";position:absolute;inset:0;background:var(--brass2);
+  animation:fillp .45s cubic-bezier(.2,.8,.3,1) forwards}
+@keyframes fillp{from{transform:translateX(-100%)}to{transform:none}}
+.cstep{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:#7d7566;margin-bottom:12px}
+.cq{font-size:clamp(21px,2.4vw,27px);font-weight:700;letter-spacing:-.015em;margin-bottom:6px;line-height:1.2}
+.chint{font-size:14px;color:#8d8474;margin-bottom:24px}
+.copts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.copts.one{grid-template-columns:1fr}
+.opt{display:flex;align-items:center;gap:13px;background:#232019;border:1px solid #3a352d;
+  padding:15px 16px;cursor:pointer;text-align:left;transition:.18s;color:#fff}
+.opt:hover{border-color:var(--brass);background:#2a251d;transform:translateY(-1px)}
+.opt.sel{border-color:var(--brass2);background:#2e2718;box-shadow:inset 0 0 0 1px var(--brass2)}
+.opt .ic{width:38px;height:38px;flex:none;border:1px solid #4a443a;display:grid;place-items:center;
+  color:var(--brass2)}
+.opt.sel .ic{border-color:var(--brass2);background:rgba(221,169,78,.1)}
+.opt b{display:block;font-size:14.5px;font-weight:600;line-height:1.25}
+.opt span{display:block;font-size:12px;color:#8d8474;margin-top:2px;font-family:var(--mono)}
+.crange{margin:6px 0 4px}
+.crange input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:3px;background:#3a352d;outline:none}
+.crange input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;
+  background:var(--brass2);cursor:pointer;border:4px solid #1d1a15;box-shadow:0 0 0 1px var(--brass2)}
+.crange input[type=range]::-moz-range-thumb{width:22px;height:22px;background:var(--brass2);
+  cursor:pointer;border:4px solid #1d1a15}
+.crv{font-family:var(--mono);font-size:34px;font-weight:500;color:var(--brass2);margin:16px 0 2px}
+.crv u{text-decoration:none;font-size:15px;color:#8d8474;margin-left:4px}
+.cnav{display:flex;gap:10px;margin-top:auto;padding-top:26px;align-items:center}
+.cback{background:none;border:1px solid #3a352d;color:#8d8474;padding:13px 18px;cursor:pointer;transition:.18s}
+.cback:hover{color:#fff;border-color:#8d8474}
+.cfield{display:grid;gap:10px;margin-bottom:6px}
+.cfield input{background:#232019;border:1px solid #3a352d;padding:15px 16px;font-size:15px;color:#fff;
+  transition:.18s;width:100%}
+.cfield input:focus{outline:none;border-color:var(--brass2);background:#2a251d}
+.cfield input::placeholder{color:#6d665a}
+.cfield input.bad{border-color:#c2543f}
+.cnote{font-size:11.5px;color:#6d665a;line-height:1.5;margin-top:12px}
+.cnote a{color:#8d8474;text-decoration:underline}
+
+/* правая колонка — смета */
+.cside{background:#141210;border-left:1px solid #34302a;padding:30px 26px;display:flex;flex-direction:column}
+.cside h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#7d7566;margin-bottom:20px}
+.srow{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #262219;
+  font-size:13.5px;color:#8d8474;align-items:baseline}
+.srow b{color:#fff;font-weight:500;text-align:right}
+.srow.mute b{color:#5d564a}
+.stot{margin-top:auto;padding-top:22px}
+.stot span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:#7d7566;display:block;margin-bottom:8px}
+.stot .val{font-size:31px;font-weight:700;color:var(--brass2);letter-spacing:-.02em;line-height:1.1;
+  transition:.25s}
+.stot .val.pop{transform:scale(1.045)}
+.stot .val u{text-decoration:none;font-size:15px;color:#8d8474;font-weight:400;margin-left:3px}
+.stot em{font-style:normal;display:block;font-size:11.5px;color:#6d665a;margin-top:9px;line-height:1.45}
+.cdone{text-align:center;padding:34px 10px;display:none}
+.cdone.on{display:block;animation:pin .5s cubic-bezier(.2,.8,.3,1)}
+@keyframes pin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cdone .ok{width:64px;height:64px;margin:0 auto 20px;border:1.5px solid var(--brass2);border-radius:50%;
+  display:grid;place-items:center;color:var(--brass2)}
+.cdone h3{font-size:24px;font-weight:700;margin-bottom:10px}
+.cdone p{color:#8d8474;font-size:15px;max-width:400px;margin:0 auto 20px;line-height:1.6}
+.tgbox{background:#141210;border:1px solid #34302a;padding:16px;text-align:left;max-width:430px;margin:0 auto;
+  font-family:var(--mono);font-size:12px;color:#8d8474;line-height:1.75;white-space:pre-wrap;word-break:break-word}
+.tgbox b{color:var(--brass2);font-weight:400}
+@media(max-width:860px){
+  .cbox{grid-template-columns:1fr}
+  .cside{border-left:none;border-top:1px solid #34302a}
+  .cmain{padding:26px 20px 24px;min-height:0}
+  .copts{grid-template-columns:1fr}}
+
+/* ---------- цены ---------- */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tier{background:#fff;border:1px solid var(--line);padding:30px 26px 26px;display:flex;flex-direction:column;
+  position:relative;transition:.25s}
+.tier:hover{transform:translateY(-5px);box-shadow:var(--sh);border-color:var(--line2)}
+.tier.hot{border-color:var(--brass);box-shadow:0 20px 60px -30px rgba(181,130,47,.6)}
+.tier.hot::before{content:"чаще всего выбирают";position:absolute;top:-1px;right:-1px;background:var(--brass);
+  color:#fff;font-family:var(--mono);font-size:10px;letter-spacing:.08em;padding:6px 11px}
+.tier h3{font-size:20px;font-weight:700;margin-bottom:4px}
+.tier .cat{font-family:var(--mono);font-size:11.5px;color:var(--brass);letter-spacing:.08em;margin-bottom:18px}
+.tier .pr{font-size:31px;font-weight:800;letter-spacing:-.025em;line-height:1}
+.tier .pr small{font-size:14px;font-weight:500;color:var(--ink3)}
+.tier .pn{font-size:12.5px;color:var(--ink3);margin:7px 0 20px;font-family:var(--mono)}
+.tier ul{list-style:none;display:grid;gap:11px;margin-bottom:24px}
+.tier li{display:flex;gap:10px;font-size:14.5px;line-height:1.45;color:var(--ink2)}
+.tier li::before{content:"";width:15px;height:15px;flex:none;margin-top:3px;
+  background:var(--brass);opacity:.16;clip-path:polygon(14% 46%,0 60%,42% 100%,100% 22%,86% 8%,40% 70%)}
+.tier li.yes::before{opacity:1}
+.tier .btn{margin-top:auto}
+@media(max-width:900px){.tiers{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+
+/* ---------- работы ---------- */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.work{background:#fff;border:1px solid var(--line);overflow:hidden;transition:.28s;cursor:pointer}
+.work:hover{transform:translateY(-5px);box-shadow:var(--sh);border-color:var(--line2)}
+.wpic{aspect-ratio:4/3;background:linear-gradient(160deg,var(--paper2),var(--paper3));
+  position:relative;display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.wpic svg{width:78%;height:auto;transition:.4s}
+.work:hover .wpic svg{transform:scale(1.05)}
+.wpic::after{content:"здесь будет ваше фото";position:absolute;bottom:9px;right:10px;font-family:var(--mono);
+  font-size:9.5px;color:var(--ink3);opacity:.45;letter-spacing:.04em}
+.wtx{padding:16px 18px 18px}
+.wtx b{display:block;font-size:16px;font-weight:700;margin-bottom:4px}
+.wtx span{font-family:var(--mono);font-size:12px;color:var(--ink3)}
+.wtx .pp{display:block;margin-top:10px;font-size:14px;color:var(--brass);font-weight:600}
+@media(max-width:900px){.works{grid-template-columns:1fr 1fr;gap:12px}}
+@media(max-width:560px){.works{grid-template-columns:1fr}}
+
+/* ---------- процесс ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.step{background:var(--paper);padding:28px 24px 26px;transition:.25s;position:relative}
+.step:hover{background:#fff}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.1em;margin-bottom:14px;
+  display:flex;align-items:center;gap:9px}
+.step .n::after{content:"";flex:1;height:1px;background:var(--line)}
+.step b{display:block;font-size:17px;font-weight:700;margin-bottom:7px}
+.step p{font-size:14.5px;color:var(--ink3);line-height:1.55}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- материалы ---------- */
+.mat{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.matsw{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
+.sw{border:1px solid var(--line);background:#fff;padding:9px 15px;cursor:pointer;font-size:13.5px;
+  transition:.2s;display:flex;align-items:center;gap:9px}
+.sw:hover{border-color:var(--line2)}
+.sw.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.sw s{text-decoration:none;width:14px;height:14px;flex:none;border:1px solid rgba(0,0,0,.15)}
+.matbody h3{font-size:22px;font-weight:700;margin-bottom:10px}
+.matbody p{color:var(--ink3);font-size:15.5px;line-height:1.6;margin-bottom:18px}
+.matspec{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.spec{border-top:1px solid var(--line);padding-top:11px}
+.spec u{text-decoration:none;display:block;font-family:var(--mono);font-size:11px;color:var(--ink3);
+  letter-spacing:.06em;margin-bottom:3px}
+.spec b{font-size:16px;font-weight:700}
+.matvis{aspect-ratio:1/.78;border:1px solid var(--line);background:#fff;display:grid;place-items:center;
+  padding:26px;transition:.4s}
+@media(max-width:860px){.mat{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- отзывы ---------- */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:#fff;border:1px solid var(--line);padding:26px 24px;position:relative}
+.rev .q{font-family:var(--mono);font-size:40px;color:var(--brass);opacity:.22;line-height:1;margin-bottom:6px}
+.rev p{font-size:15px;line-height:1.6;color:var(--ink2);margin-bottom:18px}
+.rev .who{display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:15px}
+.rev .av{width:36px;height:36px;flex:none;border-radius:50%;background:var(--paper3);
+  display:grid;place-items:center;font-weight:700;color:var(--brass);font-size:14px}
+.rev .who b{display:block;font-size:14.5px;font-weight:600}
+.rev .who span{font-family:var(--mono);font-size:11.5px;color:var(--ink3)}
+@media(max-width:900px){.revs{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{max-width:820px;margin:0 auto;border-top:1px solid var(--line)}
+.fq{border-bottom:1px solid var(--line)}
+.fq button{width:100%;background:none;border:none;text-align:left;padding:21px 44px 21px 0;cursor:pointer;
+  font-size:17px;font-weight:600;position:relative;line-height:1.4;transition:.2s}
+.fq button:hover{color:var(--brass)}
+.fq button::after{content:"";position:absolute;right:6px;top:27px;width:11px;height:11px;
+  border-right:1.5px solid var(--brass);border-bottom:1.5px solid var(--brass);
+  transform:rotate(45deg);transition:.28s}
+.fq.on button::after{transform:rotate(-135deg);top:31px}
+.fq .ans{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.3,.8,.4,1)}
+.fq .ans p{padding:0 40px 22px 0;color:var(--ink3);font-size:15.5px;line-height:1.65}
+
+/* ---------- финал ---------- */
+.fin{background:var(--ink);color:#fff;padding:76px 0;position:relative;overflow:hidden}
+.fin::before{content:"";position:absolute;width:640px;height:640px;left:-160px;bottom:-320px;
+  background:radial-gradient(circle,rgba(181,130,47,.24),transparent 62%);filter:blur(16px)}
+.finin{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
+.fin h2{color:#fff}
+.fin .lead{color:#b6ada0}
+.fform{background:#1d1a15;border:1px solid #34302a;padding:30px 28px}
+.fform h4{font-size:19px;font-weight:700;margin-bottom:6px}
+.fform .fh{font-size:13.5px;color:#8d8474;margin-bottom:20px}
+.fform input{background:#232019;border:1px solid #3a352d;padding:15px 16px;font-size:15px;color:#fff;
+  width:100%;margin-bottom:10px;transition:.18s}
+.fform input:focus{outline:none;border-color:var(--brass2)}
+.fform input::placeholder{color:#6d665a}
+.fform input.bad{border-color:#c2543f}
+.trust{display:grid;gap:16px;margin-top:8px}
+.tr{display:flex;gap:14px;align-items:flex-start}
+.tr .ic{width:40px;height:40px;flex:none;border:1px solid rgba(221,169,78,.35);display:grid;place-items:center;
+  color:var(--brass2)}
+.tr b{display:block;font-size:15.5px;font-weight:600;margin-bottom:3px}
+.tr span{font-size:13.5px;color:#8d8474;line-height:1.5}
+@media(max-width:900px){.finin{grid-template-columns:1fr;gap:30px}}
+
+/* ---------- подвал ---------- */
+footer{background:#100e0a;color:#7d7566;padding:44px 0 34px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;padding-bottom:30px;
+  border-bottom:1px solid #262219}
+footer b{color:#fff;display:block;font-size:14.5px;margin-bottom:13px;font-weight:600}
+footer a:hover{color:var(--brass2)}
+.fl{display:grid;gap:9px}
+.fbot{padding-top:22px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;
+  font-family:var(--mono);font-size:11.5px;line-height:1.7}
+.fbot span{max-width:640px}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:24px}}
+
+/* ---------- мобильная панель ---------- */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:70;display:none;gap:10px;padding:10px 14px
+  calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,244,.95);backdrop-filter:blur(12px);
+  border-top:1px solid var(--line)}
+.mob .btn{flex:1}
+.mob a.tel{flex:none;width:52px;display:grid;place-items:center;border:1px solid var(--line);color:var(--ink)}
+@media(max-width:700px){.mob{display:flex}body{padding-bottom:76px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div id="demo">ДЕМОНСТРАЦИОННЫЙ МАКЕТ · <b>ЧЕРТЁЖ</b> — вымышленная мастерская, цены и отзывы условные</div>
+
+<header id="hdr">
+  <div class="hd">
+    <a href="#top" class="logo">
+      <svg class="mk" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" stroke="#b5822f" stroke-width="1.5"/>
+        <path d="M7 24V11h7.5v13M14.5 17H25M25 11v13" stroke="#dda94e" stroke-width="1.5"/>
+        <circle cx="19.7" cy="17" r="1.1" fill="#dda94e"/>
+      </svg>
+      <span><b>ЧЕРТЁЖ</b><i>мебель на заказ · минск</i></span>
+    </a>
+    <nav class="hnav">
+      <a href="#calc">Расчёт</a><a href="#prices">Цены</a><a href="#works">Работы</a>
+      <a href="#how">Как работаем</a><a href="#faq">Вопросы</a>
+    </nav>
+    <a class="htel" href="tel:+375290000000">+375 29 000-00-00</a>
+    <button class="btn hbtn" data-go="calc">Рассчитать стоимость</button>
+  </div>
+</header>
+
+<!-- ============ ПЕРВЫЙ ЭКРАН ============ -->
+<div class="hero" id="top">
+  <div class="wrap hin">
+    <div>
+      <span class="tag"><s></s>ПРИНИМАЕМ ЗАКАЗЫ НА ОКТЯБРЬ · ОСТАЛОСЬ 3 МЕСТА</span>
+      <h1>Шкаф-купе, гардеробная или кухня <em>по вашим размерам</em></h1>
+      <p class="sub">Мастерская полного цикла: замеряем, чертим, изготавливаем и ставим сами.
+        Никаких субподрядчиков и салонной наценки — цена фиксируется в договоре до начала работ.</p>
+      <div class="hcta">
+        <button class="btn" data-go="calc">Узнать цену за 1 минуту</button>
+        <button class="btn gh" data-go="works">Посмотреть работы</button>
+      </div>
+      <div class="hnum">
+        <div><b>12<u>лет</u></b><span>работаем<br>с 2013 года</span></div>
+        <div><b>640<u>+</u></b><span>собранных<br>проектов</span></div>
+        <div><b>18<u>дн.</u></b><span>средний срок<br>изготовления</span></div>
+        <div><b>5<u>лет</u></b><span>гарантия<br>по договору</span></div>
+      </div>
+    </div>
+    <div class="draw">
+      <svg viewBox="0 0 520 400" aria-label="Чертёж шкафа-купе">
+        <line class="dim" x1="40" y1="46" x2="480" y2="46"/>
+        <line class="dim" x1="40" y1="40" x2="40" y2="52"/>
+        <line class="dim" x1="480" y1="40" x2="480" y2="52"/>
+        <text x="238" y="38">2400 мм</text>
+        <line class="dim" x1="26" y1="64" x2="26" y2="352"/>
+        <line class="dim" x1="20" y1="64" x2="32" y2="64"/>
+        <line class="dim" x1="20" y1="352" x2="32" y2="352"/>
+        <text x="0" y="212" transform="rotate(-90 14 212)">2700 мм</text>
+        <rect class="dl fillw" x="40" y="64" width="440" height="288"/>
+        <path class="dl d2" d="M187 64v288M334 64v288"/>
+        <path class="dl d2" d="M40 128h147M187 190h147M334 128h146M40 256h147M334 256h146"/>
+        <path class="dl d3" d="M96 200h36M240 116h36M390 200h36"/>
+        <path class="dl d3" d="M60 288h108v44H60zM354 288h106v44H354z"/>
+        <path class="dl d3" d="M207 210h104v122H207z"/>
+        <path class="dl d3" d="M245 262h28"/>
+        <line class="dim" x1="40" y1="368" x2="187" y2="368"/>
+        <line class="dim" x1="40" y1="362" x2="40" y2="374"/>
+        <line class="dim" x1="187" y1="362" x2="187" y2="374"/>
+        <text x="88" y="386">800</text>
+        <line class="dim" x1="187" y1="368" x2="334" y2="368"/>
+        <line class="dim" x1="334" y1="362" x2="334" y2="374"/>
+        <text x="236" y="386">800</text>
+        <line class="dim" x1="334" y1="368" x2="480" y2="368"/>
+        <line class="dim" x1="480" y1="362" x2="480" y2="374"/>
+        <text x="382" y="386">800</text>
+        <text class="cap" x="40" y="104">ШТАНГА</text>
+        <text class="cap" x="196" y="166">ПОЛКИ</text>
+        <text class="cap" x="343" y="104">АНТРЕСОЛЬ</text>
+        <text class="cap" x="207" y="204">ЯЩИКИ</text>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="mq"><div class="mqin">
+  <span>ЗАМЕР БЕСПЛАТНО<i>◆</i>ДИЗАЙН-ПРОЕКТ ЗА 2 ДНЯ<i>◆</i>ЦЕНА В ДОГОВОРЕ<i>◆</i>СВОЙ ЦЕХ В МИНСКЕ<i>◆</i>ГАРАНТИЯ 5 ЛЕТ<i>◆</i>РАССРОЧКА ДО 6 МЕСЯЦЕВ<i>◆</i></span>
+  <span>ЗАМЕР БЕСПЛАТНО<i>◆</i>ДИЗАЙН-ПРОЕКТ ЗА 2 ДНЯ<i>◆</i>ЦЕНА В ДОГОВОРЕ<i>◆</i>СВОЙ ЦЕХ В МИНСКЕ<i>◆</i>ГАРАНТИЯ 5 ЛЕТ<i>◆</i>РАССРОЧКА ДО 6 МЕСЯЦЕВ<i>◆</i></span>
+</div></div>
+
+<!-- ============ КАЛЬКУЛЯТОР ============ -->
+<section id="calc">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Расчёт за минуту</div>
+      <h2>Посчитайте свою мебель <span>прямо здесь</span></h2>
+      <p class="lead">Пять вопросов без звонков и поездок в салон. Вилка цены появится сразу,
+        а точную смету пришлём после ответов — обычно в течение получаса.</p>
+    </div>
+
+    <div class="cbox rv">
+      <div class="cmain">
+        <div class="cprog" id="prog"></div>
+        <div id="cbody"></div>
+        <div class="cnav" id="cnav"></div>
+      </div>
+      <aside class="cside">
+        <h4>ВАШ ЗАКАЗ</h4>
+        <div id="sum"></div>
+        <div class="stot">
+          <span>ПРЕДВАРИТЕЛЬНО</span>
+          <div class="val" id="tot">—</div>
+          <em id="totn">Ответьте на вопросы — вилка появится здесь и будет пересчитываться на каждом шаге.</em>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ЦЕНЫ ============ -->
+<section id="prices" class="grid-bg">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Прозрачные цены</div>
+      <h2>Три уровня — <span>разница только в материалах</span></h2>
+      <p class="lead">Работа, фурнитура крепежа и монтаж одинаковые во всех трёх. Меняется то,
+        из чего сделан корпус и фасады, и чья фурнитура внутри.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier rv">
+        <h3>Практичный</h3>
+        <div class="cat">ЛДСП · КРОМКА ABS 2 ММ</div>
+        <div class="pr">от 520 <small>руб / пог. м</small></div>
+        <div class="pn">шкаф 2,4 м ≈ 1 250 руб</div>
+        <ul>
+          <li class="yes">Корпус ЛДСП 16 мм, влагостойкий низ</li>
+          <li class="yes">Фурнитура с доводчиками</li>
+          <li class="yes">Замер, проект и доставка бесплатно</li>
+          <li>Фасады с фрезеровкой</li>
+          <li>Подсветка в комплекте</li>
+        </ul>
+        <button class="btn dk" data-go="calc">Рассчитать</button>
+      </div>
+      <div class="tier hot rv">
+        <h3>Основной</h3>
+        <div class="cat">МДФ · ЭМАЛЬ ИЛИ ПЛЁНКА SOFT-TOUCH</div>
+        <div class="pr">от 890 <small>руб / пог. м</small></div>
+        <div class="pn">шкаф 2,4 м ≈ 2 140 руб</div>
+        <ul>
+          <li class="yes">Корпус ЛДСП 18 мм, фасады МДФ</li>
+          <li class="yes">Фурнитура Blum или Hettich</li>
+          <li class="yes">Замер, проект и доставка бесплатно</li>
+          <li class="yes">Фасады с фрезеровкой, любой цвет RAL</li>
+          <li>Подсветка в комплекте</li>
+        </ul>
+        <button class="btn" data-go="calc">Рассчитать</button>
+      </div>
+      <div class="tier rv">
+        <h3>Авторский</h3>
+        <div class="cat">ШПОН · МАССИВ · СТЕКЛО В АЛЮМИНИИ</div>
+        <div class="pr">от 1 460 <small>руб / пог. м</small></div>
+        <div class="pn">шкаф 2,4 м ≈ 3 500 руб</div>
+        <ul>
+          <li class="yes">Шпон дуба или ясеня, массив по запросу</li>
+          <li class="yes">Фурнитура Blum премиум, сенсорное открывание</li>
+          <li class="yes">Замер, проект и доставка бесплатно</li>
+          <li class="yes">Нестандартные формы и радиусы</li>
+          <li class="yes">Светодиодная подсветка с датчиком</li>
+        </ul>
+        <button class="btn dk" data-go="calc">Рассчитать</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ РАБОТЫ ============ -->
+<section id="works">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Портфолио</div>
+      <h2>Что мы собрали <span>за последние месяцы</span></h2>
+      <p class="lead">На месте чертежей встанут ваши фотографии — по три-четыре на проект.
+        Подписи с размером, сроком и ценой оставляем: именно их читают дольше всего.</p>
+    </div>
+    <div class="works" id="wgrid"></div>
+  </div>
+</section>
+
+<!-- ============ ПРОЦЕСС ============ -->
+<section id="how" class="grid-bg">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Как всё устроено</div>
+      <h2>Шесть шагов <span>от звонка до готовой мебели</span></h2>
+      <p class="lead">Ни одного этапа, о котором вы узнаете постфактум. Даты и суммы известны заранее.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><div class="n">ШАГ 01</div><b>Заявка</b>
+        <p>Оставляете размеры и пожелания здесь на сайте. Перезваниваем в течение 20 минут,
+          в выходные — до полудня.</p></div>
+      <div class="step"><div class="n">ШАГ 02</div><b>Замер</b>
+        <p>Мастер приезжает со стремянкой и лазерным дальномером, снимает все отклонения стен.
+          Бесплатно и ни к чему не обязывает.</p></div>
+      <div class="step"><div class="n">ШАГ 03</div><b>Проект</b>
+        <p>За два дня рисуем в 3D: наполнение, цвета, фурнитура. Правим столько раз,
+          сколько нужно, — это тоже бесплатно.</p></div>
+      <div class="step"><div class="n">ШАГ 04</div><b>Договор</b>
+        <p>Фиксируем цену, комплектацию и дату установки. Предоплата 50%,
+          остальное — после сборки у вас дома.</p></div>
+      <div class="step"><div class="n">ШАГ 05</div><b>Цех</b>
+        <p>Пилим, кромим, сверлим у себя на Кальварийской. Присылаем фото на важных этапах,
+          чтобы вы видели процесс.</p></div>
+      <div class="step"><div class="n">ШАГ 06</div><b>Установка</b>
+        <p>Привозим и собираем за один день, мусор увозим с собой. Подписываем акт
+          и выдаём гарантийный талон на 5 лет.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ МАТЕРИАЛЫ ============ -->
+<section id="mat">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Материалы</div>
+      <h2>Пощупайте <span>заранее</span></h2>
+      <p class="lead">Выберите фасад — покажем, как он выглядит, сколько стоит и где ведёт себя лучше всего.</p>
+    </div>
+    <div class="mat rv">
+      <div class="matbody">
+        <div class="matsw" id="matsw"></div>
+        <h3 id="mth"></h3>
+        <p id="mtp"></p>
+        <div class="matspec" id="mtspec"></div>
+      </div>
+      <div class="matvis" id="matvis"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ОТЗЫВЫ ============ -->
+<section class="grid-bg">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <div class="eyebrow">Отзывы · в макете условные</div>
+      <h2>Что пишут <span>после установки</span></h2>
+      <p class="lead">Здесь встанут ваши настоящие отзывы — скриншотами из переписки или текстом
+        с именем и районом. Выдуманные видно сразу, поэтому лучше собрать три живых.</p>
+    </div>
+    <div class="revs">
+      <div class="rev rv"><div class="q">“</div>
+        <p>Заказывали гардеробную в новостройке, стены кривые совершенно. Замерщик сразу это
+          показал и предложил решение с компенсационными планками. По итогу щелей нет вообще.</p>
+        <div class="who"><span class="av">М</span><span><b>Марина</b><span>гардеробная 3,2 м · Каменная Горка</span></span></div>
+      </div>
+      <div class="rev rv"><div class="q">“</div>
+        <p>Сделали за 16 дней вместо обещанных 20. Отдельно порадовало, что привезли и собрали
+          в один день, никакой недели с разобранными коробками в коридоре.</p>
+        <div class="who"><span class="av">А</span><span><b>Андрей</b><span>шкаф-купе 2,4 м · Уручье</span></span></div>
+      </div>
+      <div class="rev rv"><div class="q">“</div>
+        <p>Долго выбирали между тремя мастерскими. Здесь единственные посчитали цену сразу
+          на сайте и она в итоге совпала с договором до рубля.</p>
+        <div class="who"><span class="av">Е</span><span><b>Екатерина</b><span>кухня 4,1 м · Малиновка</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-h rv" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow" style="justify-content:center">Вопросы</div>
+      <h2>Отвечаем прямо, <span>без «зависит от проекта»</span></h2>
+    </div>
+    <div class="faq rv" id="faqbox"></div>
+  </div>
+</section>
+
+<!-- ============ ФИНАЛ ============ -->
+<section class="fin" id="order">
+  <div class="wrap finin">
+    <div>
+      <div class="eyebrow" style="color:var(--brass2)">Бесплатный замер</div>
+      <h2>Приедем, измерим <span>и посчитаем точно</span></h2>
+      <p class="lead">Замер ни к чему не обязывает: если цена не подойдёт — просто разойдёмся.
+        Работаем по Минску и в радиусе 30 км.</p>
+      <div class="trust">
+        <div class="tr"><span class="ic">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M10 2l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V5z"/><path d="M7 10l2 2 4-4"/></svg></span>
+          <span><b>Цена в договоре</b><span>Сумма и дата фиксируются до старта и не меняются</span></span></div>
+        <div class="tr"><span class="ic">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="10" cy="10" r="8"/><path d="M10 5v5l3 2"/></svg></span>
+          <span><b>Ответ за 20 минут</b><span>В рабочее время. Вечером — утром следующего дня</span></span></div>
+        <div class="tr"><span class="ic">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2.5" y="4" width="15" height="12"/><path d="M2.5 8h15M7 4v12"/></svg></span>
+          <span><b>Свой цех</b><span>Не перепродаём чужое: всё режем и собираем сами</span></span></div>
+      </div>
+    </div>
+    <form class="fform" id="ff" novalidate>
+      <h4>Записаться на замер</h4>
+      <div class="fh">Или позвоните: <a href="tel:+375290000000" style="color:var(--brass2)">+375 29 000-00-00</a></div>
+      <input id="fname" placeholder="Как к вам обращаться" autocomplete="name">
+      <input id="fphone" placeholder="+375 (__) ___-__-__" inputmode="tel" autocomplete="tel">
+      <button class="btn wide" type="submit" style="margin-top:6px">Записаться на замер</button>
+      <div class="cnote" style="margin-top:14px">Нажимая кнопку, вы соглашаетесь на обработку
+        персональных данных. Не звоним с рекламой и не передаём номер третьим лицам.</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <b>ЧЕРТЁЖ</b>
+        <div style="line-height:1.7">Мебельная мастерская полного цикла.<br>
+          Шкафы-купе, гардеробные, кухни, детская и офисная мебель на заказ.</div>
+      </div>
+      <div><b>Разделы</b><div class="fl">
+        <a href="#calc">Расчёт стоимости</a><a href="#prices">Цены</a>
+        <a href="#works">Работы</a><a href="#how">Как работаем</a><a href="#faq">Вопросы</a></div></div>
+      <div><b>Контакты</b><div class="fl">
+        <a href="tel:+375290000000">+375 29 000-00-00</a>
+        <span>Минск, ул. Кальварийская, 00</span>
+        <span>Пн–Сб 9:00–19:00</span></div></div>
+    </div>
+    <div class="fbot">
+      <span>Демонстрационный макет. «ЧЕРТЁЖ» — вымышленное название, адрес, телефон, цены,
+        сроки и отзывы приведены как пример наполнения и не являются офертой.</span>
+      <span>Макет: HTML + Vercel</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mob">
+  <a class="tel" href="tel:+375290000000" aria-label="Позвонить">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M4 3h3l1.5 4-2 1.5a10 10 0 005 5L13 11.5l4 1.5v3a1 1 0 01-1 1A13 13 0 013 4a1 1 0 011-1z"/></svg>
+  </a>
+  <button class="btn" data-go="calc">Рассчитать стоимость</button>
+</div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const money=n=>n.toLocaleString('ru-RU').replace(/,/g,' ');
+
+/* ============ КАЛЬКУЛЯТОР ============ */
+const TYPES=[
+  {k:'kupe',t:'Шкаф-купе',s:'от 480 руб / пог. м',base:480,ic:'M3 3h18v18H3zM12 3v18M7 11h2M15 11h2'},
+  {k:'garder',t:'Гардеробная',s:'от 430 руб / пог. м',base:430,ic:'M3 3h18v18H3zM3 9h18M9 9v12M15 3v6M6 14h1'},
+  {k:'kitchen',t:'Кухня',s:'от 620 руб / пог. м',base:620,ic:'M3 3h18v7H3zM3 14h18v7H3zM8 3v7M15 14v7M6 17h1'},
+  {k:'other',t:'Другое',s:'прихожая, детская, стол',base:500,ic:'M3 6h18v12H3zM3 12h18M8 6v12'}
+];
+const MATS=[
+  {k:'ldsp',t:'ЛДСП',s:'практичный',mul:1,c:'#c9ab84'},
+  {k:'mdf',t:'МДФ эмаль',s:'основной',mul:1.72,c:'#e6e2da'},
+  {k:'shpon',t:'Шпон дуба',s:'авторский',mul:2.8,c:'#a9743f'}
+];
+const EXTRA=[
+  {k:'light',t:'Подсветка',s:'+180 руб',p:180},
+  {k:'draw',t:'Ящики с доводчиками',s:'+240 руб',p:240},
+  {k:'mirror',t:'Зеркальные двери',s:'+320 руб',p:320},
+  {k:'antre',t:'Антресоль под потолок',s:'+150 руб',p:150}
+];
+const st={step:0,type:null,len:2.4,mat:null,ex:[],name:'',phone:''};
+const ICO=d=>'<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="'+d+'"/></svg>';
+
+function price(){
+  if(!st.type||!st.mat)return null;
+  const T=TYPES.find(x=>x.k===st.type),M=MATS.find(x=>x.k===st.mat);
+  let p=T.base*st.len*M.mul;
+  st.ex.forEach(k=>{const e=EXTRA.find(x=>x.k===k);if(e)p+=e.p;});
+  return [Math.round(p*.9/10)*10,Math.round(p*1.12/10)*10];
+}
+function drawSum(){
+  const T=st.type&&TYPES.find(x=>x.k===st.type),M=st.mat&&MATS.find(x=>x.k===st.mat);
+  const rows=[
+    ['Изделие',T?T.t:'—',!T],
+    ['Длина',st.step>0?st.len.toFixed(1).replace('.',',')+' м':'—',st.step===0],
+    ['Материал',M?M.t:'—',!M],
+    ['Дополнения',st.ex.length?st.ex.map(k=>EXTRA.find(x=>x.k===k).t).join(', '):'нет',!st.ex.length]
+  ];
+  $('#sum').innerHTML=rows.map(r=>'<div class="srow'+(r[2]?' mute':'')+'"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>').join('');
+  const p=price(),el=$('#tot');
+  if(p){
+    el.innerHTML=money(p[0])+' — '+money(p[1])+'<u>руб</u>';
+    el.classList.add('pop');setTimeout(()=>el.classList.remove('pop'),260);
+    $('#totn').textContent='Вилка с учётом фурнитуры и монтажа. Точную смету пришлём после замера — обычно она внутри этой вилки.';
+  }else{
+    el.textContent='—';
+    $('#totn').textContent='Ответьте на вопросы — вилка появится здесь и будет пересчитываться на каждом шаге.';
+  }
+}
+function prog(){
+  $('#prog').innerHTML=[0,1,2,3,4].map(i=>'<i class="'+(i<=st.step?'on':'')+'"></i>').join('');
+}
+function opt(sel,ic,t,s,attr){
+  return '<button class="opt'+(sel?' sel':'')+'" '+attr+'><span class="ic">'+ICO(ic)+'</span>'+
+    '<span><b>'+t+'</b><span>'+s+'</span></span></button>';
+}
+function render(){
+  prog();
+  const b=$('#cbody'),n=$('#cnav');
+  const head=(i,q,h)=>'<div class="cstep">ШАГ '+(i+1)+' ИЗ 5</div><div class="cq">'+q+'</div><div class="chint">'+h+'</div>';
+  if(st.step===0){
+    b.innerHTML=head(0,'Что делаем?','Выберите тип изделия — от него зависит базовая цена метра.')+
+      '<div class="copts">'+TYPES.map(t=>opt(st.type===t.k,t.ic,t.t,t.s,'data-t="'+t.k+'"')).join('')+'</div>';
+    n.innerHTML='<button class="btn" id="next"'+(st.type?'':' disabled style="opacity:.45"')+'>Дальше</button>';
+  }
+  if(st.step===1){
+    b.innerHTML=head(1,'Какая длина?','Примерно, по стене. Точность до сантиметра снимет замерщик.')+
+      '<div class="crv" id="lv">'+st.len.toFixed(1).replace('.',',')+' <u>метра</u></div>'+
+      '<div class="crange"><input type="range" min="1" max="6" step="0.1" value="'+st.len+'" id="len"></div>'+
+      '<div class="chint" style="display:flex;justify-content:space-between;margin-top:4px">'+
+      '<span>1 м</span><span>6 м</span></div>';
+    n.innerHTML='<button class="cback" id="back">Назад</button><button class="btn" id="next">Дальше</button>';
+  }
+  if(st.step===2){
+    b.innerHTML=head(2,'Из чего фасады?','Корпус во всех вариантах ЛДСП — разница в лицевой части.')+
+      '<div class="copts one">'+MATS.map(m=>opt(st.mat===m.k,'M3 4h18v16H3zM3 10h18',m.t,m.s+' · ×'+m.mul,'data-m="'+m.k+'"')).join('')+'</div>';
+    n.innerHTML='<button class="cback" id="back">Назад</button><button class="btn" id="next"'+(st.mat?'':' disabled style="opacity:.45"')+'>Дальше</button>';
+  }
+  if(st.step===3){
+    b.innerHTML=head(3,'Что-то добавим?','Необязательно — можно пропустить и обсудить на замере.')+
+      '<div class="copts">'+EXTRA.map(e=>opt(st.ex.includes(e.k),'M12 5v14M5 12h14',e.t,e.s,'data-e="'+e.k+'"')).join('')+'</div>';
+    n.innerHTML='<button class="cback" id="back">Назад</button><button class="btn" id="next">Дальше</button>';
+  }
+  if(st.step===4){
+    const p=price();
+    b.innerHTML=head(4,'Куда прислать расчёт?','Пришлём смету и три похожих проекта. Без спама и звонков с рекламой.')+
+      '<div class="cfield"><input id="nm" placeholder="Как к вам обращаться" value="'+st.name+'" autocomplete="name">'+
+      '<input id="ph" placeholder="+375 (__) ___-__-__" inputmode="tel" value="'+st.phone+'" autocomplete="tel"></div>'+
+      '<div class="cnote">Ваша вилка: <b style="color:var(--brass2)">'+(p?money(p[0])+' — '+money(p[1])+' руб':'—')+
+      '</b>. Точная смета — после бесплатного замера.</div>';
+    n.innerHTML='<button class="cback" id="back">Назад</button><button class="btn" id="send">Получить расчёт</button>';
+  }
+  drawSum();
+}
+$('#cbody').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.t){st.type=b.dataset.t;render();}
+  if(b.dataset.m){st.mat=b.dataset.m;render();}
+  if(b.dataset.e){const k=b.dataset.e,i=st.ex.indexOf(k);i<0?st.ex.push(k):st.ex.splice(i,1);render();}
+});
+$('#cbody').addEventListener('input',e=>{
+  if(e.target.id==='len'){st.len=+e.target.value;
+    $('#lv').innerHTML=st.len.toFixed(1).replace('.',',')+' <u>метра</u>';drawSum();}
+});
+function phoneFix(el){
+  let v=el.value.replace(/\D/g,'');
+  if(v.startsWith('375'))v=v.slice(3);
+  if(v.startsWith('80'))v=v.slice(2);
+  v=v.slice(0,9);
+  let o='+375';
+  if(v.length)o+=' ('+v.slice(0,2);
+  if(v.length>=2)o+=')';
+  if(v.length>2)o+=' '+v.slice(2,5);
+  if(v.length>5)o+='-'+v.slice(5,7);
+  if(v.length>7)o+='-'+v.slice(7,9);
+  el.value=o;return v.length===9;
+}
+document.addEventListener('input',e=>{
+  if(e.target.id==='ph'||e.target.id==='fphone'){
+    if(!e.target.value.trim())return;
+    phoneFix(e.target);e.target.classList.remove('bad');}
+});
+$('#cnav').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(b.id==='back'){st.step--;render();}
+  if(b.id==='next'){
+    if(st.step===0&&!st.type)return;
+    if(st.step===2&&!st.mat)return;
+    st.step++;render();}
+  if(b.id==='send'){
+    const nm=$('#nm'),ph=$('#ph');
+    let bad=false;
+    if(!nm.value.trim()){nm.classList.add('bad');bad=true;}else nm.classList.remove('bad');
+    if(!phoneFix(ph)){ph.classList.add('bad');bad=true;}else ph.classList.remove('bad');
+    if(bad)return;
+    st.name=nm.value.trim();st.phone=ph.value;
+    done();}
+});
+function done(){
+  const p=price(),T=TYPES.find(x=>x.k===st.type),M=MATS.find(x=>x.k===st.mat);
+  const msg='🪚 Новая заявка с сайта\n'+
+    'Имя: '+st.name+'\nТелефон: '+st.phone+'\n'+
+    'Изделие: '+T.t+', '+st.len.toFixed(1).replace('.',',')+' м\n'+
+    'Материал: '+M.t+'\n'+
+    'Дополнения: '+(st.ex.length?st.ex.map(k=>EXTRA.find(x=>x.k===k).t).join(', '):'нет')+'\n'+
+    'Расчёт: '+money(p[0])+'—'+money(p[1])+' руб';
+  $('.cmain').innerHTML='<div class="cdone on"><div class="ok">'+
+    '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 13l4 4L19 7"/></svg></div>'+
+    '<h3>Заявка отправлена</h3>'+
+    '<p>Спасибо, '+st.name.replace(/[<>&]/g,'')+'. Перезвоним в течение 20 минут и пришлём смету.</p>'+
+    '<div class="tgbox"><b>↓ так это приходит владельцу в телеграм</b>\n\n'+msg.replace(/[<>&]/g,'')+'</div>'+
+    '<div class="cnote" style="max-width:430px;margin:14px auto 0">В демо-макете заявка никуда не уходит. '+
+    'На рабочем сайте она падает в телеграм-бота за 1–2 секунды, дублируется на почту и в таблицу.</div></div>';
+}
+render();
+
+/* ============ РАБОТЫ ============ */
+const WK=[
+  ['Шкаф-купе в прихожую','2,4 × 2,7 м · МДФ эмаль · 16 дней','2 140 руб',
+   'M4 8h56v44H4zM24 8v44M42 8v44M12 26h6M31 26h5M50 26h6M8 44h12v6H8zM46 44h10v6H46z'],
+  ['Гардеробная под ключ','3,2 м · ЛДСП + сетка · 14 дней','1 780 руб',
+   'M4 8h56v44H4zM4 20h56M22 20v32M42 20v32M8 30h10M8 38h10M46 30h10M26 28h12v20H26z'],
+  ['Кухня угловая','4,1 м · шпон дуба · 21 день','5 320 руб',
+   'M4 8h34v16H4zM44 8h16v16H44zM4 34h22v18H4zM32 34h28v18H32zM12 24v4M52 24v4M14 42h4M42 42h6'],
+  ['Детская с рабочим местом','2,8 м · ЛДСП белый · 12 дней','1 640 руб',
+   'M4 10h24v18H4zM32 10h28v10H32zM4 34h56v6H4zM10 40v12M54 40v12M36 24h20v4H36z'],
+  ['ТВ-зона в гостиную','3,6 м · МДФ soft-touch · 15 дней','2 480 руб',
+   'M4 12h56v10H4zM18 26h28v18H18zM4 46h56v6H4zM8 30h6M50 30h6M28 34h8'],
+  ['Шкаф в мансарду','нестандарт · косой потолок · 19 дней','2 960 руб',
+   'M4 24L34 8v44H4zM38 8h22v44H38zM4 36h30M38 30h22M14 42h8M46 40h6']
+];
+$('#wgrid').innerHTML=WK.map(w=>'<article class="work rv"><div class="wpic">'+
+  '<svg viewBox="0 0 64 60" fill="none" stroke="#8a7c62" stroke-width="1.3" stroke-linejoin="round">'+
+  '<path d="'+w[3]+'"/></svg></div>'+
+  '<div class="wtx"><b>'+w[0]+'</b><span>'+w[1]+'</span><span class="pp">'+w[2]+'</span></div></article>').join('');
+$('#wgrid').addEventListener('click',()=>document.querySelector('[data-go="calc"]').click());
+/* ============ МАТЕРИАЛЫ ============ */
+const MM=[
+ {t:'ЛДСП',c:'#c9ab84',c2:'#a98a63',h:'ЛДСП 16–18 мм с кромкой ABS',
+  p:'Рабочая лошадка: не боится влаги по кромке, не выгорает, легко моется. Берут, когда нужен честный шкаф без переплаты за внешний вид фасада.',
+  s:[['ЦЕНА','от 520 руб/м'],['СРОК','10–14 дней'],['ЦВЕТА','64 декора'],['ГДЕ ЛУЧШЕ','прихожая, детская']]},
+ {t:'МДФ эмаль',c:'#e8e4dc',c2:'#cfc9bd',h:'МДФ 19 мм, эмаль в любой цвет RAL',
+  p:'Гладкая матовая поверхность без стыков и кромки. Можно попасть в цвет стен или фартука точно, вплоть до полутона.',
+  s:[['ЦЕНА','от 890 руб/м'],['СРОК','14–18 дней'],['ЦВЕТА','любой RAL'],['ГДЕ ЛУЧШЕ','кухня, гостиная']]},
+ {t:'Soft-touch',c:'#8d9a94',c2:'#71807a',h:'МДФ с плёнкой soft-touch',
+  p:'Приятная бархатистая поверхность, не собирает отпечатки так, как глянец. Компромисс между ценой эмали и её видом.',
+  s:[['ЦЕНА','от 760 руб/м'],['СРОК','12–16 дней'],['ЦВЕТА','28 оттенков'],['ГДЕ ЛУЧШЕ','спальня, шкаф']]},
+ {t:'Шпон дуба',c:'#a9743f',c2:'#84592c',h:'Шпон натурального дуба или ясеня',
+  p:'Настоящее дерево с живым рисунком: двух одинаковых фасадов не бывает. Тонируется в любой оттенок, от белёного до венге.',
+  s:[['ЦЕНА','от 1 460 руб/м'],['СРОК','18–25 дней'],['ЦВЕТА','12 тонировок'],['ГДЕ ЛУЧШЕ','гостиная, кабинет']]}
+];
+let mi=0;
+function drawMat(){
+  const m=MM[mi];
+  $('#matsw').innerHTML=MM.map((x,i)=>'<button class="sw'+(i===mi?' on':'')+'" data-i="'+i+'">'+
+    '<s style="background:'+x.c+'"></s>'+x.t+'</button>').join('');
+  $('#mth').textContent=m.h;
+  $('#mtp').textContent=m.p;
+  $('#mtspec').innerHTML=m.s.map(s=>'<div class="spec"><u>'+s[0]+'</u><b>'+s[1]+'</b></div>').join('');
+  $('#matvis').innerHTML='<svg viewBox="0 0 260 200" style="width:100%;height:auto">'+
+    '<defs><linearGradient id="g'+mi+'" x1="0" y1="0" x2="1" y2="1">'+
+    '<stop offset="0" stop-color="'+m.c+'"/><stop offset="1" stop-color="'+m.c2+'"/></linearGradient></defs>'+
+    '<rect x="12" y="12" width="112" height="176" rx="2" fill="url(#g'+mi+')" stroke="#00000022"/>'+
+    '<rect x="136" y="12" width="112" height="84" rx="2" fill="url(#g'+mi+')" stroke="#00000022"/>'+
+    '<rect x="136" y="104" width="112" height="84" rx="2" fill="url(#g'+mi+')" stroke="#00000022"/>'+
+    '<circle cx="112" cy="100" r="3.5" fill="#00000033"/>'+
+    '<circle cx="144" cy="88" r="3.5" fill="#00000033"/>'+
+    '<circle cx="144" cy="112" r="3.5" fill="#00000033"/>'+
+    (mi===3?'<path d="M20 40q40 14 96 4M20 90q46 12 96 2M20 140q40 10 96 3" stroke="#00000018" fill="none"/>':'')+
+    '</svg>';
+}
+$('#matsw').addEventListener('click',e=>{const b=e.target.closest('.sw');if(!b)return;
+  mi=+b.dataset.i;drawMat();});
+drawMat();
+
+/* ============ FAQ ============ */
+const FAQ=[
+ ['Сколько ждать мебель?','Шкаф-купе или прихожая — 10–16 дней с момента подписания договора, кухня — 18–25. Срок стоит в договоре: если задержим по своей вине, вычитаем 1% от суммы за каждый день.'],
+ ['Замер правда бесплатный?','Да, и он ни к чему не обязывает. Мастер приезжает, снимает размеры, показывает варианты наполнения. Если после расчёта решите не заказывать — расстанемся без обид и без счёта за выезд.'],
+ ['Почему у вас дешевле салонов?','У нас нет шоурума в центре и продавцов на проценте. Есть цех, замерщик и сборщики. Вы платите за материалы, фурнитуру и работу — и не платите за аренду витрины.'],
+ ['Что если стены кривые?','Обычная история, особенно в новостройках. Замерщик снимает отклонения лазерным дальномером, а в проект закладываем компенсационные планки — по факту стык к стене получается без щелей.'],
+ ['Можно в рассрочку?','Да, до 6 месяцев без переплаты через банк-партнёр. Оформляется на замере, нужен только паспорт. Либо 50% предоплаты и остальное после установки.'],
+ ['Что с гарантией?','5 лет на корпус и фурнитуру по договору. Если через два года перестанет мягко закрываться ящик — приедем и отрегулируем бесплатно, это не считается износом.']
+];
+$('#faqbox').innerHTML=FAQ.map((f,i)=>'<div class="fq"><button aria-expanded="false">'+f[0]+'</button>'+
+  '<div class="ans"><p>'+f[1]+'</p></div></div>').join('');
+$('#faqbox').addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const fq=b.parentElement,open=fq.classList.contains('on');
+  $$('.fq').forEach(x=>{x.classList.remove('on');x.querySelector('.ans').style.maxHeight=null;
+    x.querySelector('button').setAttribute('aria-expanded','false');});
+  if(!open){fq.classList.add('on');b.setAttribute('aria-expanded','true');
+    fq.querySelector('.ans').style.maxHeight=fq.querySelector('.ans').scrollHeight+'px';}
+});
+
+/* ============ ФОРМА ВНИЗУ ============ */
+$('#ff').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nm=$('#fname'),ph=$('#fphone');let bad=false;
+  if(!nm.value.trim()){nm.classList.add('bad');bad=true;}else nm.classList.remove('bad');
+  if(!phoneFix(ph)){ph.classList.add('bad');bad=true;}else ph.classList.remove('bad');
+  if(bad)return;
+  $('#ff').innerHTML='<h4 style="color:var(--brass2)">Записали</h4>'+
+    '<div class="fh" style="margin-bottom:16px">Перезвоним в течение 20 минут и согласуем время замера.</div>'+
+    '<div class="tgbox">🪚 <b>Заявка на замер</b>\n\nИмя: '+nm.value.trim().replace(/[<>&]/g,'')+
+    '\nТелефон: '+ph.value+'\nИсточник: форма внизу страницы</div>'+
+    '<div class="cnote" style="margin-top:14px">В демо-макете заявка никуда не уходит — на рабочем сайте '+
+    'она приходит в телеграм за пару секунд.</div>';
+});
+
+/* ============ ПРОЧЕЕ ============ */
+document.addEventListener('click',e=>{
+  const b=e.target.closest('[data-go]');if(!b)return;
+  const el=document.getElementById(b.dataset.go);if(!el)return;
+  window.scrollTo({top:el.offsetTop-(hdr.offsetHeight+14),behavior:'smooth'});
+});
+const hdr=$('#hdr');
+function hh(){document.documentElement.style.setProperty('--hh',hdr.offsetHeight+'px');}
+hh();addEventListener('resize',hh);addEventListener('load',hh);
+addEventListener('scroll',()=>hdr.classList.toggle('stuck',scrollY>90),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}}),
+  {threshold:.12,rootMargin:'0px 0px -40px 0px'});
+$$('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*70+'ms';io.observe(el);});
+</script>
+</body>
+</html>
